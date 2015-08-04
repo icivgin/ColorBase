@@ -43,8 +43,8 @@ app.get('/search', function (req, res) {
 		      page.evaluate(function () { return $('.themeBox').html(); }, function (result) {
 		        var re = new RegExp(/#[A-Z0-9]{6}/g);
 		        var hexCodes = result.match(re);
-		        console.log(hexCodes);
-		        res.send(hexCodes);
+		        console.log(result);
+		        res.send(result);
 		        ph.exit();
 		      });
 	      	});
