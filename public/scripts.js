@@ -14,7 +14,7 @@ function findAll (inputString) {
 $('#import-kuler').on('submit', function (e) {
 	e.preventDefault();
 	findAll($('#kuler-url').val());
-});
+}); 
 
 
 $('#reset-color').on('click', function (e) {
