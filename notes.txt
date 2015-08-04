@@ -1,0 +1,8 @@
+var children = $('.themeBox').children();
+console.log(children);
+var hexCodes = [];
+for(i=0;i<children.length;i++) {
+    hexCodes.push(children[i].attributes[3].nodeValue);
+    hexCodes[i] = hexCodes[i].replace('background: ', '');
+}
+console.log(hexCodes);

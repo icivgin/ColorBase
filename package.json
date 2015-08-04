@@ -1,0 +1,27 @@
+{
+  "name": "color_base",
+  "version": "1.0.0",
+  "description": "An app to help designers visualize and test their color schemes full-screen.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/icivgin/ColorBase.git"
+  },
+  "author": "Ian Civgin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/icivgin/ColorBase/issues"
+  },
+  "homepage": "https://github.com/icivgin/ColorBase#readme",
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "express": "^4.13.3",
+    "node-jsdom": "^3.1.5",
+    "phantom": "^0.7.2",
+    "request": "^2.60.0",
+    "underscore": "^1.8.3"
+  }
+}
