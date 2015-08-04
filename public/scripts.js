@@ -1,30 +1,20 @@
 $(function() {
 
-function replaceString (inputString) {
-	var re = /\//g;
-	return inputString.replace(re, '%2f');
+function findAll (inputString) {
+	var arr = [];
+	var re = /[a-z0-9]{6}/g;
+	arr.push(inputString.match(re));
+	arr[0].shift();
+	console.log(arr[0]);
+	$('#examples').show();
+	$('body').css('background-color', '#'+arr[0][4]);
+	$('.change').css('color', '#'+arr[0][2]);
 }
 
 $('#import-kuler').on('submit', function (e) {
 	e.preventDefault();
-	console.log(encodeURIComponent($('#kuler-url').val()));
-	$.get('/search/' + encodeURIComponent($('#kuler-url').val()), function (data) {
-		$('#examples').show();
-		$('body').css('background-color', data[4]);
-		$('.change').css('color', data[2]);
-	})
+	findAll($('#kuler-url').val());
 });
-
-// $('#import-kuler').on('submit', function (e) {
-// 	e.preventDefault();
-// 	console.log(encodeURIComponent($('#kuler-url').val()));
-// 	$.get('/search', function (data) {
-// 		console.log(data);
-// 		$('#examples').show();
-//  		$('body').css('background-color', data[4]);
-//  		$('.change').css('color', data[2]);
-// 	})
-// });
 
 
 $('#reset-color').on('click', function (e) {
