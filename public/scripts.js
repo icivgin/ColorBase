@@ -8,10 +8,8 @@ function replaceString (inputString) {
 $('#import-kuler').on('submit', function (e) {
 	e.preventDefault();
 	console.log(encodeURIComponent($('#kuler-url').val()));
-	$.get('/search/' + encodeURIComponent($('#kuler-url').val()), function (data) {
-		$('#examples').show();
-		$('body').css('background-color', data[4]);
-		$('.change').css('color', data[2]);
+	$.get('/search', function (data) {
+		console.log(data);
 	})
 });
 
